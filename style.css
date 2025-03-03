@@ -1,3 +1,13 @@
+/* Header */
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    padding: 20px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
 body {
     font-family: Arial, sans-serif;
@@ -26,13 +36,19 @@ body {
 }
 
 /* Description */
-.discription {
+.intro .description {
     text-align: center;
     padding: 20px;
     font-size: 18px;
     line-height: 1.6;
+    background-color: rgb(218, 230, 226);
+    
 }
 
+.project-item{
+    margin-top: 20px;  /* Space above the image */
+    margin-bottom: 20px; /* Space below the image */
+}
 /* Projects Section */
 .projects {
     text-align: center;
@@ -53,11 +69,22 @@ body {
     border-radius: 8px;
 }
 
-.project img {
-    width: 100%;
-    max-width: 600px;
-    border-radius: 8px;
+
+.project-images {
+    position: relative;
+    display: flex;
+    gap: 10px; /* Space between images */
+    flex-wrap: wrap; /* Allow images to wrap if needed */
 }
+
+.project-images img {
+    width: 400px; /* Medium size */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional rounded corners */
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+
 
 .project-description {
     font-size: 16px;
@@ -109,16 +136,6 @@ body {
     width: 250px;
     height: auto;
     border-radius: 10px;
-}
-/* Header */
-.head {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
-    padding: 20px;
-    color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Footer */
