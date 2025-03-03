@@ -1,0 +1,132 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+
+.name {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.buttons a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.buttons a:hover {
+    color: #ff9800;
+}
+
+/* Description */
+.discription {
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Projects Section */
+.projects {
+    text-align: center;
+    padding: 50px;
+}
+
+.projects h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.project {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 80%;
+    border-radius: 8px;
+}
+
+.project img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+}
+
+.project-description {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Footer */
+
+.foot h2 {
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 10px;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    transition: 0.3s;
+    border-radius: 50%;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    max-width: 80%;
+    margin: auto;
+}
+
+.description {
+    width: 60%;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.profile-image img {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+}
+/* Header */
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    padding: 20px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+.foot {
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+    text-align: center;
+    color: white;
+    padding: 20px;
+    margin-top: 50px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+}
