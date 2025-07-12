@@ -1,167 +1,403 @@
-/* Header */
-.head {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
-    padding: 20px;
-    color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+/* Reset some default styles */
+* {
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9fafc;
+  color: #222;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
+/* Header */
+.head {
+  position: sticky;
+  top: 0;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  z-index: 999;
+}
 
 .name {
-    font-size: 24px;
-    font-weight: bold;
+  font-size: 26px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  user-select: none;
 }
 
 .buttons a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 18px;
-    transition: 0.3s;
+  color: white;
+  text-decoration: none;
+  margin: 0 18px;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.buttons a:hover {
-    color: #ff9800;
+.buttons a:hover,
+.buttons a:focus {
+  background-color: #ff9800;
+  color: #222;
+  outline: none;
 }
 
-/* Description */
-.intro .description {
-    text-align: center;
-    padding: 20px;
-    font-size: 18px;
-    line-height: 1.6;
-    background-color: rgb(218, 230, 226);
-    
-}
-
-.project-item{
-    margin-top: 20px;  /* Space above the image */
-    margin-bottom: 20px; /* Space below the image */
-}
-/* Projects Section */
-.projects {
-    text-align: center;
-    padding: 50px;
-}
-
-.projects h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-}
-
-.project {
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 80%;
-    border-radius: 8px;
-}
-
-
-.project-images {
-    position: relative;
-    display: flex;
-    gap: 0; /* Remove gap to allow overlap */
-    flex-wrap: nowrap; /* Keep them in a row */
-    justify-content: center;
-    overflow-x: auto; /* Scroll if too many images */
-  }
-  
-  .project-images img {
-    width: 180px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, z-index 0.3s ease;
-    margin-left: -60px; /* Overlap amount */
-    position: relative;
-    z-index: 1;
-    cursor: pointer;
-  }
-  
-  .project-images img:hover {
-    transform: scale(1.6); /* Enlarge on hover */
-    z-index: 10; /* Bring to front */
-  }
-  
-
-
-
-.project-description {
-    font-size: 16px;
-    margin-top: 10px;
-}
-
-/* Footer */
-
-.foot h2 {
-    margin-bottom: 10px;
-}
-
-.social-icons {
-    margin-top: 10px;
-}
-
-.social-icons a {
-    display: inline-block;
-    margin: 10px;
-}
-
-.social-icons img {
-    width: 40px;
-    height: 40px;
-    transition: 0.3s;
-    border-radius: 50%;
-}
-
-.social-icons img:hover {
-    transform: scale(1.1);
-}
-
+/* Intro Section */
 .intro {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 50px;
-    max-width: 80%;
-    margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 20px;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
 .description {
-    width: 60%;
-    font-size: 18px;
-    line-height: 1.6;
+  flex: 1 1 60%;
+  font-size: 20px;
+  background-color: #e3f2fd;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(38, 50, 56, 0.1);
+  color: #0d47a1;
+  font-weight: 500;
+}
+
+.profile-image {
+  flex: 0 0 250px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 5px #6a11cb,
+    0 10px 30px rgba(106, 17, 203, 0.5);
+  cursor: default;
+  transition: transform 0.3s ease;
 }
 
 .profile-image img {
-    width: 250px;
-    height: auto;
-    border-radius: 10px;
+  display: block;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
-/* Footer */
-.foot {
-    background: linear-gradient(135deg, #2575fc, #6a11cb);
-    text-align: center;
-    color: white;
-    padding: 20px;
-    margin-top: 50px;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+.profile-image:hover {
+  transform: scale(1.05);
 }
-#skill{
-    text-align: center;
-    font-size: 28px;
-    margin-bottom: 20px;
+
+/* Projects Section */
+.projects {
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 0 20px 60px;
+  text-align: center;
+}
+
+.projects h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: #222;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* Each project block */
+.project-item {
+  background: #fff;
+  margin-bottom: 60px;
+  padding: 30px 30px 40px;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.project-item:hover {
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.15);
+}
+
+/* Images container */
+.project-images {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: #6a11cb #e0e0e0;
+}
+
+.project-images::-webkit-scrollbar {
+  height: 8px;
+}
+
+.project-images::-webkit-scrollbar-track {
+  background: #e0e0e0;
+  border-radius: 10px;
+}
+
+.project-images::-webkit-scrollbar-thumb {
+  background-color: #6a11cb;
+  border-radius: 10px;
+}
+
+/* Project images */
+.project-images img {
+  flex-shrink: 0;
+  width: 220px;
+  height: 140px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+  cursor: pointer;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease;
+  user-select: none;
+  border: 3px solid transparent;
+}
+
+/* Hover effect: enlarge images smoothly */
+.project-images img:hover {
+  transform: scale(1.25);
+  box-shadow: 0 15px 35px rgba(106, 17, 203, 0.5);
+  border-color: #6a11cb;
+  z-index: 10;
+  position: relative;
+}
+
+/* Project description text */
+.project-item p,
+.project-item a {
+  font-size: 17px;
+  color: #444;
+  margin-top: 18px;
+  line-height: 1.5;
+  user-select: text;
+}
+
+.project-item a {
+  color: #6a11cb;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 6px;
+  transition: color 0.3s ease;
+}
+
+.project-item a:hover,
+.project-item a:focus {
+  color: #ff9800;
+  text-decoration: underline;
+  outline: none;
+}
+
+/* Skills Section */
+#skill {
+  margin-top: 100px;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  color: #222;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.project-item.skills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  max-width: 900px;
+  margin: 30px auto 100px;
+}
+
+.project-item.skills .project-images {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  overflow: visible;
+}
+
+.project-item.skills .project-images img {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  object-fit: contain;
+  box-shadow: 0 4px 12px rgba(106, 17, 203, 0.15);
+  transition: transform 0.3s ease;
+  cursor: default;
+  border: 2px solid transparent;
+}
+
+.project-item.skills .project-images img:hover {
+  transform: scale(1.2);
+  border-color: #6a11cb;
+  box-shadow: 0 8px 24px rgba(106, 17, 203, 0.4);
+}
+
+/* Footer Section */
+.foot {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.3);
+  margin-top: 80px;
+}
+
+.foot h2 {
+  font-size: 28px;
+  margin-bottom: 25px;
+  font-weight: 700;
+  user-select: none;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 35px;
+}
+
+.social-icons a {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background-color: #fff;
+  padding: 8px;
+  width: 56px;
+  height: 56px;
+}
+
+.social-icons a:hover {
+  transform: scale(1.15);
+  box-shadow: 0 6px 18px rgba(255, 152, 0, 0.7);
+}
+
+.social-icons img {
+  width: 40px;
+  height: 40px;
+  display: block;
+  filter: drop-shadow(0 0 1px rgba(0,0,0,0.15));
+  user-select: none;
+}
+
+/* Footer copyright */
+footer p {
+  font-size: 15px;
+  letter-spacing: 1.2px;
+  user-select: none;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Zoom Popup Viewer */
+.image-viewer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+  z-index: 10000;
+}
+
+.image-viewer.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#zoomedImage {
+  max-width: 90vw;
+  max-height: 85vh;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(106, 17, 203, 0.7);
+  cursor: zoom-out;
+  user-select: none;
+  transition: transform 0.4s ease;
+}
+
+#zoomedImage:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .intro {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+
+  .description {
+    width: 100%;
+    padding: 20px;
+    font-size: 18px;
+  }
+
+  .profile-image {
+    margin-top: 30px;
+  }
+
+  .project-images {
+    overflow-x: scroll;
+  }
+
+  .project-images img {
+    width: 180px;
+    height: 110px;
+  }
+
+  .project-item {
+    max-width: 100%;
+    padding: 20px 20px 30px;
+  }
+}
+
+@media (max-width: 400px) {
+  .buttons a {
+    margin: 0 8px;
+    font-size: 16px;
+  }
+
+  .name {
+    font-size: 22px;
+  }
+
+  .profile-image img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .project-images img {
+    width: 140px;
+    height: 90px;
+  }
 }

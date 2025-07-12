@@ -7,17 +7,17 @@
     <title>Bereket Ketema - Portfolio</title>
 </head>
 <body>
-    <div class="head">
+    <div class="head" >
        <p class="name">BEREKET KETEMA</p>
        <div class="buttons">
         <a href="#home" class="home">Home</a>
-        <a href="#projects">Projects</a>
+        <a href="#projects" id="home">Projects</a>
         <a href="#skill">Skills</a>
         <a href="#contact">Contact</a>
        </div>        
     </div>
     
-    <div class="intro">
+    <div class="intro" >
         <div class="description">
             <p>I am Bereket Ketema, a Software Engineering student at Adama Science and Technology University.
             I specialize in backend and mobile app development, aspiring to be one of the best software engineers in my country.</p>
@@ -76,28 +76,51 @@
             <img src="icons/skills/dart.png" alt="Dart">
             <img src="icons/skills/django.png" alt="Django">
             <img src="icons/skills/flutter.png" alt="flutter">
-            <img src="icons/skills/java.png" alt="C++">
-            <img src="icons/skills/js.png" alt="Dart">
         </div><br>
     </div>
+    <br><br><br><br>
+            <div class="project-item">
+            <div class="project-images">
+                <img src="icons/skills/mongodb.png" alt="Dart">
+                <img src="icons/skills/mysql.png" alt="C++">
+                <img src="icons/skills/python.png" alt="Dart">
+                <img src="icons/skills/react.png" alt="C++">
+            </div><br></div>
     <br><br><br><br>
     <div class="project-item">
-        <div class="project-images">
-            <div class="project-item">
-        <div class="project-images">
-            <img src="icons/skills/microsoftsql.png" alt="C++">
-            <img src="icons/skills/mongodb.png" alt="Dart">
-            <img src="icons/skills/mysql.png" alt="C++">
-            <img src="icons/skills/python.png" alt="Dart">
-            <img src="icons/skills/react.png" alt="C++">
-            <img src="icons/skills/react_native.png" alt="Dart">
-        </div><br>
-    </div>
+            <div class="project-images">
+                <img src="icons/skills/microsoftsql.png" alt="C++">
+                <img src="icons/skills/react_native.png" alt="Dart">
+                <img src="icons/skills/java.png" alt="C++">
+                <img src="icons/skills/js.png" alt="Dart">
+            </div><br>
     <br><br><br><br>
         </div><br>
-    </div>
     <br><br><br><br>
      <br><br><br>
+     <!-- Zoom Popup Viewer -->
+<div class="image-viewer" id="imageViewer">
+  <img id="zoomedImage" src="" alt="Zoomed">
+</div>
+
+<script>
+  const images = document.querySelectorAll('.project-images img');
+  const viewer = document.getElementById('imageViewer');
+  const zoomedImage = document.getElementById('zoomedImage');
+
+  images.forEach(image => {
+    image.addEventListener('click', () => {
+      zoomedImage.src = image.src;
+      viewer.classList.add('active');
+    });
+  });
+
+  viewer.addEventListener('click', () => {
+    viewer.classList.remove('active');
+    zoomedImage.src = '';
+  });
+</script>
+
     <div class="foot" id="contact">
         <h2>Contact Me</h2>
         <div class="social-icons">
@@ -107,9 +130,12 @@
             <a href="https://t.me/@Bekrkett" target="_blank">
                 <img src="icons/telegram.png" alt="Telegram">
             </a>
-            <a href="mailto:bereketketema866@gmail.com">
+            <a href="https://mail.google.com/mail/u/1/?hl=en-GB#sent" target="_blank">
                 <img src="icons/email.png" alt="Email">
-            </a>            
+            </a>
+            <a href="https://www.linkedin.com/in/bereket-ketema-70a77a362/" target="_blank">
+                <img src="icons/linked.png" alt="linkedin">
+            </a>              
         </div>
         <footer>
             <p>&copy; 2025. @Bereket All rights reserved.</p>
